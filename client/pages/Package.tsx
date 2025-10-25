@@ -402,7 +402,7 @@ export default function Package() {
                       </div>
                     </div>
 
-                    <div className="mt-4 flex items-center gap-3 mt-auto">
+                    <div className="mt-4 flex items-center gap-3">
                       <button
                         onClick={(e) => {
                           e.stopPropagation();
