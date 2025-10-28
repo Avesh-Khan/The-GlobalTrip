@@ -15,6 +15,7 @@ import Contact from "./pages/Contact";
 import Visa from "./pages/Visa";
 import VisaDetail from "./pages/VisaDetail";
 import WhatsAppWidget from "@/components/site/WhatsAppWidget";
+import { HelmetProvider } from "react-helmet-async";
 
 const queryClient = new QueryClient();
 
@@ -41,4 +42,8 @@ const App = () => (
   </QueryClientProvider>
 );
 
-createRoot(document.getElementById("root")!).render(<App />);
+createRoot(document.getElementById("root")!).render(
+  <HelmetProvider>
+    <App />
+  </HelmetProvider>
+);

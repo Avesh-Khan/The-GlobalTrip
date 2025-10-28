@@ -15,6 +15,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import React, { forwardRef, TextareaHTMLAttributes, useState } from "react";
 import { packages } from "@/lib/packages";
+import { Helmet } from "react-helmet-async";
 
 const schema = z.object({
   name: z.string().min(2, "Name is required"),
@@ -58,7 +59,7 @@ export default function Contact() {
     },
   });
 
-// ✅ Web3Forms Integration (JSON method)
+  // ✅ Web3Forms Integration (JSON method)
   const onSubmit = async (values: FormValues) => {
     try {
       setLoading(true);
@@ -99,258 +100,266 @@ export default function Contact() {
   };
 
   return (
-    <main>
-      <Header />
+    <>
+      <Helmet>
+        <title>Contact Global Trip International | Plan Your Luxury World Tour</title>
+        <meta name="description" content="Contact Global Trip International to plan your luxury world tour. Our experts assist with travel loans, exclusive packages, and custom itineraries for couples and families." />
+        <meta name="keywords" content="contact Global Trip International, world travel agency, travel assistance, luxury tours, global holidays, travel loans" />
+      </Helmet>
 
-      <section className="container pt-12 px-4 sm:px-6 lg:px-8">
-        <div className="rounded-2xl bg-primary text-white p-6 sm:p-10 shadow-lg">
-          <div className="text-center">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-wide">
-              GET IN TOUCH
-            </h2>
-            <p className="mt-3 text-sm md:text-base text-white/90 max-w-xl mx-auto">
-              Questions about bookings or visas? Send a message and we'll reply
+      <main>
+        <Header />
+
+        <section className="container pt-12 px-4 sm:px-6 lg:px-8">
+          <div className="rounded-2xl bg-primary text-white p-6 sm:p-10 shadow-lg">
+            <div className="text-center">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-wide">
+                GET IN TOUCH
+              </h2>
+              <p className="mt-3 text-sm md:text-base text-white/90 max-w-xl mx-auto">
+                Questions about bookings or visas? Send a message and we'll reply
+                within 24 hours.
+              </p>
+              <div className="mt-6">
+                <form className="mt-4" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="container pt-12 px-4 sm:px-6 lg:px-8 pb-24 grid md:grid-cols-2 gap-12 items-start">
+          <div className="max-sm:mt-5">
+            <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight text-secondary">
+              Contact Us
+            </h1>
+            <p className="mt-4 text-foreground/70 max-w-prose">
+              Questions about bookings or visas? Send a message — we'll reply
               within 24 hours.
             </p>
-            <div className="mt-6">
-              <form className="mt-4" />
-            </div>
-          </div>
-        </div>
-      </section>
 
-      <section className="container pt-12 px-4 sm:px-6 lg:px-8 pb-24 grid md:grid-cols-2 gap-12 items-start">
-        <div className="max-sm:mt-5">
-          <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight text-secondary">
-            Contact Us
-          </h1>
-          <p className="mt-4 text-foreground/70 max-w-prose">
-            Questions about bookings or visas? Send a message — we'll reply
-            within 24 hours.
-          </p>
-
-          <div className="mt-8 grid sm:grid-cols-2 gap-4">
-            <div className="rounded-xl bg-white p-4 shadow-sm">
-              <h4 className="font-semibold">Office</h4>
-              <p className="text-sm text-foreground/70 mt-2">
-                123 Nordic Lane, Oslo, Norway
-              </p>
-            </div>
-            <div className="rounded-xl bg-white p-4 shadow-sm">
-              <h4 className="font-semibold">Email</h4>
-              <a
-                href="mailto:globaltripinternational@gmail.com"
-                className="text-sm text-primary hover:underline"
-              >
-                globaltripinternational@gmail.com
-              </a>
-            </div>
-            <div className="rounded-xl bg-white p-4 shadow-sm">
-              <h4 className="font-semibold">Phone</h4>
-              <a
-                href="tel:+919156856387"
-                className="text-sm text-primary hover:underline"
-                style={{ marginLeft: "1px" }}
-              >
-                +91 9156856387
-              </a>
-            </div>
-            <div className="rounded-xl bg-white p-4 shadow-sm">
-              <h4 className="font-semibold">Working Hours</h4>
-              <p className="text-sm text-foreground/70 mt-2">
-                Mon - Fri: 9:00 - 18:00
-                <br />
-                Sat: 10:00 - 14:00
-              </p>
-            </div>
-          </div>
-
-          <div className="mt-8">
-            <h3 className="font-semibold text-lg">
-              Frequently Asked Questions
-            </h3>
-            <div className="mt-3 space-y-2">
-              <details className="rounded-lg bg-white p-4 shadow-sm">
-                <summary className="cursor-pointer font-medium">
-                  How long does booking confirmation take?
-                </summary>
-                <p className="mt-2 text-sm text-foreground/70">
-                  Most bookings are confirmed within 24 hours. Custom
-                  itineraries may take 48-72 hours to finalize.
+            <div className="mt-8 grid sm:grid-cols-2 gap-4">
+              <div className="rounded-xl bg-white p-4 shadow-sm">
+                <h4 className="font-semibold">Office</h4>
+                <p className="text-sm text-foreground/70 mt-2">
+                  Nagpur, Maharashtra 
                 </p>
-              </details>
-              <details className="rounded-lg bg-white p-4 shadow-sm">
-                <summary className="cursor-pointer font-medium">
-                  Do you provide travel insurance?
-                </summary>
-                <p className="mt-2 text-sm text-foreground/70">
-                  We recommend travel insurance. We can connect you with trusted
-                  providers during booking.
-                </p>
-              </details>
-              <details className="rounded-lg bg-white p-4 shadow-sm">
-                <summary className="cursor-pointer font-medium">
-                  Can I customize a package?
-                </summary>
-                <p className="mt-2 text-sm text-foreground/70">
-                  Yes — most of our packages can be tailored to your
-                  preferences. Contact our team to get started.
-                </p>
-              </details>
-            </div>
-          </div>
-
-          <div className="mt-8 flex items-center gap-4">
-            <div className="rounded-full bg-emerald-100 text-emerald-800 px-3 py-1 text-sm font-semibold">
-              Trusted
-            </div>
-            <div className="rounded-full bg-yellow-100 text-yellow-800 px-3 py-1 text-sm font-semibold">
-              Secure Payments
-            </div>
-            <div className="rounded-full bg-slate-100 text-slate-800 px-3 py-1 text-sm font-semibold">
-              24/7 Support
-            </div>
-          </div>
-        </div>
-
-        <div className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-border">
-          <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                <FormField
-                  control={form.control}
-                  name="name"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Name</FormLabel>
-                      <FormControl>
-                        <Input placeholder="Your full name" {...field} />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-
-                <FormField
-                  control={form.control}
-                  name="email"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Email</FormLabel>
-                      <FormControl>
-                        <Input
-                          type="email"
-                          placeholder="you@example.com"
-                          {...field}
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-
-                <FormField
-                  control={form.control}
-                  name="phone"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Phone</FormLabel>
-                      <FormControl>
-                        <Input
-                          type="tel"
-                          placeholder="Optional phone"
-                          {...field}
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-
-                <FormField
-                  control={form.control}
-                  name="packageId"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Package</FormLabel>
-                      <FormControl>
-                        <select
-                          {...field}
-                          className="w-full rounded-md border border-input px-3 py-2 bg-background"
-                        >
-                          <option value="">
-                            -- Select package (optional) --
-                          </option>
-                          {packages.map((p) => (
-                            <option key={p.id} value={p.id}>
-                              {p.title} — {p.location}
-                            </option>
-                          ))}
-                        </select>
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-
-                <FormField
-                  control={form.control}
-                  name="enquiry"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Enquiry</FormLabel>
-                      <FormControl>
-                        <select
-                          {...field}
-                          className="w-full rounded-md border border-input px-3 py-2 bg-background"
-                        >
-                          <option value="">Select enquiry type</option>
-                          <option value="Booking">Booking</option>
-                          <option value="Availability">Availability</option>
-                          <option value="Visa">Visa</option>
-                          <option value="Customization">Customization</option>
-                          <option value="Other">Other</option>
-                        </select>
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
               </div>
-
-              <FormField
-                control={form.control}
-                name="message"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Message</FormLabel>
-                    <FormControl>
-                      <Textarea placeholder="How can we help you?" {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <div className="flex items-center gap-3">
-                <Button
-                  type="submit"
-                  className="uppercase tracking-wide bg-primary hover:bg-primary/90 text-white"
-                >
-                  Send Message
-                </Button>
+              <div className="rounded-xl bg-white p-4 shadow-sm">
+                <h4 className="font-semibold">Email</h4>
                 <a
                   href="mailto:globaltripinternational@gmail.com"
-                  className="ml-2 text-sm text-foreground/70"
+                  className="text-sm text-primary hover:underline"
                 >
-                  Or email us directly
+                  globaltripinternational@gmail.com
                 </a>
               </div>
-            </form>
-          </Form>
-        </div>
-      </section>
-      <Footer />
-    </main>
+              <div className="rounded-xl bg-white p-4 shadow-sm">
+                <h4 className="font-semibold">Phone</h4>
+                <a
+                  href="tel:+919156856387"
+                  className="text-sm text-primary hover:underline"
+                  style={{ marginLeft: "1px" }}
+                >
+                  +91 9156856387
+                </a>
+              </div>
+              <div className="rounded-xl bg-white p-4 shadow-sm">
+                <h4 className="font-semibold">Working Hours</h4>
+                <p className="text-sm text-foreground/70 mt-2">
+                  Mon - Fri: 9:00 - 18:00
+                  <br />
+                  Sat: 10:00 - 14:00
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-8">
+              <h3 className="font-semibold text-lg">
+                Frequently Asked Questions
+              </h3>
+              <div className="mt-3 space-y-2">
+                <details className="rounded-lg bg-white p-4 shadow-sm">
+                  <summary className="cursor-pointer font-medium">
+                    How long does booking confirmation take?
+                  </summary>
+                  <p className="mt-2 text-sm text-foreground/70">
+                    Most bookings are confirmed within 24 hours. Custom
+                    itineraries may take 48-72 hours to finalize.
+                  </p>
+                </details>
+                <details className="rounded-lg bg-white p-4 shadow-sm">
+                  <summary className="cursor-pointer font-medium">
+                    Do you provide travel insurance?
+                  </summary>
+                  <p className="mt-2 text-sm text-foreground/70">
+                    We recommend travel insurance. We can connect you with trusted
+                    providers during booking.
+                  </p>
+                </details>
+                <details className="rounded-lg bg-white p-4 shadow-sm">
+                  <summary className="cursor-pointer font-medium">
+                    Can I customize a package?
+                  </summary>
+                  <p className="mt-2 text-sm text-foreground/70">
+                    Yes — most of our packages can be tailored to your
+                    preferences. Contact our team to get started.
+                  </p>
+                </details>
+              </div>
+            </div>
+
+            <div className="mt-8 flex items-center gap-4">
+              <div className="rounded-full bg-emerald-100 text-emerald-800 px-3 py-1 text-sm font-semibold">
+                Trusted
+              </div>
+              <div className="rounded-full bg-yellow-100 text-yellow-800 px-3 py-1 text-sm font-semibold">
+                Secure Payments
+              </div>
+              <div className="rounded-full bg-slate-100 text-slate-800 px-3 py-1 text-sm font-semibold">
+                24/7 Support
+              </div>
+            </div>
+          </div>
+
+          <div className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-border">
+            <Form {...form}>
+              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <FormField
+                    control={form.control}
+                    name="name"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Name</FormLabel>
+                        <FormControl>
+                          <Input placeholder="Your full name" {...field} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+                  <FormField
+                    control={form.control}
+                    name="email"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Email</FormLabel>
+                        <FormControl>
+                          <Input
+                            type="email"
+                            placeholder="you@example.com"
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+                  <FormField
+                    control={form.control}
+                    name="phone"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Phone</FormLabel>
+                        <FormControl>
+                          <Input
+                            type="tel"
+                            placeholder="Optional phone"
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+                  <FormField
+                    control={form.control}
+                    name="packageId"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Package</FormLabel>
+                        <FormControl>
+                          <select
+                            {...field}
+                            className="w-full rounded-md border border-input px-3 py-2 bg-background"
+                          >
+                            <option value="">
+                              -- Select package (optional) --
+                            </option>
+                            {packages.map((p) => (
+                              <option key={p.id} value={p.id}>
+                                {p.title} — {p.location}
+                              </option>
+                            ))}
+                          </select>
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+                  <FormField
+                    control={form.control}
+                    name="enquiry"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Enquiry</FormLabel>
+                        <FormControl>
+                          <select
+                            {...field}
+                            className="w-full rounded-md border border-input px-3 py-2 bg-background"
+                          >
+                            <option value="">Select enquiry type</option>
+                            <option value="Booking">Booking</option>
+                            <option value="Availability">Availability</option>
+                            <option value="Visa">Visa</option>
+                            <option value="Customization">Customization</option>
+                            <option value="Other">Other</option>
+                          </select>
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                </div>
+
+                <FormField
+                  control={form.control}
+                  name="message"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Message</FormLabel>
+                      <FormControl>
+                        <Textarea placeholder="How can we help you?" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+
+                <div className="flex items-center gap-3">
+                  <Button
+                    type="submit"
+                    className="uppercase tracking-wide bg-primary hover:bg-primary/90 text-white"
+                  >
+                    Send Message
+                  </Button>
+                  <a
+                    href="mailto:globaltripinternational@gmail.com"
+                    className="ml-2 text-sm text-foreground/70"
+                  >
+                    Or email us directly
+                  </a>
+                </div>
+              </form>
+            </Form>
+          </div>
+        </section>
+        <Footer />
+      </main>
+    </>
   );
 }

@@ -11,15 +11,15 @@ import VisaApplicationForm from "@/components/visa/VisaApplicationForm";
 function getVisaInfo(c: Country) {
   const commonDocs = ["Passport (minimum 6 months validity)", "Recent passport-size photo", "Completed application form"];
   const regionBased: Record<string, { processing: string; fee: string; extra?: string[] }> = {
-    "Europe": { processing: "5-10 business days", fee: "$40" },
-    "Asia": { processing: "7-15 business days", fee: "$50" },
-    "Africa": { processing: "10-20 business days", fee: "$60" },
-    "Middle East": { processing: "7-14 business days", fee: "$55" },
-    "North America": { processing: "5-10 business days", fee: "$45" },
-    "South America": { processing: "7-12 business days", fee: "$40" },
-    "Australia": { processing: "5-10 business days", fee: "$65" },
-    "Central America": { processing: "7-14 business days", fee: "$35" },
-    "Caribbean": { processing: "7-14 business days", fee: "$35" },
+  "Europe": { processing: "5-10 business days", fee: "₹3,320" },         // $40 × 83
+  "Asia": { processing: "7-15 business days", fee: "₹4,150" },           // $50 × 83
+  "Africa": { processing: "10-20 business days", fee: "₹4,980" },        // $60 × 83
+  "Middle East": { processing: "7-14 business days", fee: "₹4,565" },    // $55 × 83
+  "North America": { processing: "5-10 business days", fee: "₹3,735" },  // $45 × 83
+  "South America": { processing: "7-12 business days", fee: "₹3,320" },  // $40 × 83
+  "Australia": { processing: "5-10 business days", fee: "₹5,395" },      // $65 × 83
+  "Central America": { processing: "7-14 business days", fee: "₹2,905" },// $35 × 83
+  "Caribbean": { processing: "7-14 business days", fee: "₹2,905" }, 
   };
 
   const base = regionBased[c.region] ?? { processing: "7-14 business days", fee: "$50" };

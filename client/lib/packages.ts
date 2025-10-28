@@ -6,7 +6,8 @@ export const packages = [
 
   { id: "LON-10", title: "LONDON SCOTLAND IRELAND 10N11D", price: 241725.00, rating: 4.8, img: "https://cdn.pixabay.com/photo/2016/08/05/15/02/london-1572444_1280.jpg", categories: ["Europe", "City Tour"], location: "UK, Ireland", nights: 10 },
   { id: "EU-06", title: "MAJESTIC EUROPE 6N7D", price: 184725.00, rating: 4.9, img: "https://cdn.pixabay.com/photo/2019/08/30/11/33/bridge-4441037_1280.jpg", categories: ["Europe", "Historical Park"], location: "Europe", nights: 6 },
-  { id: "KL-04", title: "MALAYSIA 4N", price: 67750.00, rating: 4.7, img: "https://cdn.pixabay.com/photo/2022/04/03/22/05/buildings-7109918_1280.jpg", categories: ["Far East", "City Tour"], location: "Malaysia", nights: 4 },
+  { id: "DXB-SK-05", title: "Dubai 5N (Festival Package)", price: 99750.00, rating: 4.7, img: "https://cdn.pixabay.com/photo/2023/02/04/16/29/boat-7767575_1280.jpg", categories: ["Middle East", "City Tour"], location: "Dubai, UAE", nights: 5 },
+
 
   { id: "MAL-04", title: "MALDIVES 4N", price: 67750.00, rating: 4.9, img: "https://cdn.pixabay.com/photo/2014/10/14/10/22/maldives-488030_1280.jpg", categories: ["Maldives", "Island", "Beach"], location: "Maldives", nights: 4 },
   { id: "MCT-02", title: "MUSCAT 2N (Oman)", price: 29750.00, rating: 4.8, img: "https://cdn.pixabay.com/photo/2015/02/10/14/08/muscat-631082_1280.jpg", categories: ["Middle East", "City Tour"], location: "Muscat, Oman", nights: 2 },
@@ -14,6 +15,7 @@ export const packages = [
 
   // --- Screenshot 2025-10-12 140438.jpg (Japan/Korea, Europe, Kerala) ---
   { id: "JPN-06A", title: "AMAZING JAPAN 6N", price: 248750.00, rating: 4.8, img: "https://cdn.pixabay.com/photo/2022/08/15/05/23/sun-rays-7387131_1280.jpg", categories: ["Japan Taiwan & Korea", "Temple"], location: "Japan", nights: 6 },
+    { id: "PHU-VIL-05", title: "VIETNAM PHU QUOC 5N", price: 95750.00, rating: 4.7, img: "https://cdn.pixabay.com/photo/2019/04/30/10/31/sea-4168234_1280.jpg", categories: ["Vietnam", "Island"], location: "Phu Quoc, Vietnam", nights: 5 },
   { id: "KER-06", title: "KERALA DELIGHT 6N", price: 59750.00, rating: 4.7, img: "https://cdn.pixabay.com/photo/2013/07/19/17/38/kerala-165347_1280.jpg", categories: ["Kerala", "Nature"], location: "Kerala, India", nights: 6 },
   { id: "KOR-06", title: "AMAZING KOREA 6N", price: 199750.00, rating: 4.8, img: "https://cdn.pixabay.com/photo/2019/11/12/03/18/ocean-4619943_1280.jpg", categories: ["Japan Taiwan & Korea", "Historical Park"], location: "Korea", nights: 6 },
 
@@ -61,7 +63,7 @@ export const packages = [
 
   // --- Screenshot 2025-10-12 140426.jpg (China, Middle East, Australia/NZ, CIS, Europe, Kashmir) ---
   { id: "CHI-06", title: "MAJESTIC CHINA 6N7D", price: 129750.00, rating: 4.8, img: "https://cdn.pixabay.com/photo/2023/04/01/13/26/lake-7892215_1280.jpg", categories: ["China", "Historical Park"], location: "China", nights: 6 },
-  { id: "DXB-SK-05", title: "Dubai 5N (Festival Package)", price: 99750.00, rating: 4.7, img: "https://cdn.pixabay.com/photo/2023/02/04/16/29/boat-7767575_1280.jpg", categories: ["Middle East", "City Tour"], location: "Dubai, UAE", nights: 5 },
+    { id: "KL-04", title: "MALAYSIA 4N", price: 67750.00, rating: 4.7, img: "https://cdn.pixabay.com/photo/2022/04/03/22/05/buildings-7109918_1280.jpg", categories: ["Far East", "City Tour"], location: "Malaysia", nights: 4 },
   { id: "CHI-12N", title: "DISCOVER CHINA 12N13D", price: 302225.00, rating: 4.8, img: "https://cdn.pixabay.com/photo/2020/08/19/15/31/huangpu-river-5501210_1280.jpg", categories: ["China", "City Tour"], location: "China", nights: 12 },
 
   { id: "THAI-09", title: "DISCOVER THAILAND 9N", price: 119750.00, rating: 4.7, img: "https://cdn.pixabay.com/photo/2021/01/16/13/06/bangkok-5922078_1280.jpg", categories: ["Far East", "Beach"], location: "Thailand", nights: 9 },
@@ -101,7 +103,6 @@ export const packages = [
   // --- Packages not in the screenshots above (Placeholder for the remaining 4 packages) ---
   // To complete the list to 71 (based on the original very long screenshot estimate)
 
-  { id: "PHU-VIL-05", title: "VIETNAM PHU QUOC 5N", price: 95750.00, rating: 4.7, img: "https://cdn.pixabay.com/photo/2019/04/30/10/31/sea-4168234_1280.jpg", categories: ["Vietnam", "Island"], location: "Phu Quoc, Vietnam", nights: 5 },
   { id: "BOS-06", title: "BALKANS DISCOVERY 6N", price: 145000.00, rating: 4.8, img: "https://cdn.pixabay.com/photo/2024/01/25/12/30/mountain-8531778_1280.jpg", categories: ["Europe", "Historical Park"], location: "Balkans", nights: 6 },
   { id: "AFR-10", title: "SOUTH AFRICA WILDLIFE 10N", price: 285000.00, rating: 4.9, img: "https://cdn.pixabay.com/photo/2021/03/30/19/22/orange-breasted-sunbird-6137612_1280.jpg", categories: ["Adventure", "Nature"], location: "South Africa", nights: 10 },
   { id: "AUS-NZL-10", title: "AUSTRALIA & NEW ZEALAND 10N", price: 310000.00, rating: 4.8, img: "https://cdn.pixabay.com/photo/2020/10/20/03/43/glacier-5669423_1280.jpg", categories: ["Australia & New Zealand", "Best Destination"], location: "Australia & NZ", nights: 10 },
