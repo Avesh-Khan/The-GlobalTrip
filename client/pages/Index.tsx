@@ -1,4 +1,4 @@
-import { Star, Plane, Map, Settings2 } from "lucide-react";
+import { Star, Plane, Map, Settings2, Wallet } from "lucide-react";
 import Header from "@/components/site/Header";
 import Footer from "@/components/site/Footer";
 import { Button } from "@/components/ui/button";
@@ -171,37 +171,52 @@ export default function Index() {
         <section className="container mt-20 grid md:grid-cols-2 gap-10 items-center">
           <div>
             <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-secondary">
-              PLAN YOUR TRIP <br /> WITH US
-            </h2>
-            <div className="mt-8 space-y-6">
-              <div className="flex gap-4">
-                <Map className="text-primary" />
-                <div>
-                  <h3 className="font-semibold">Choose Your Destination</h3>
-                  <p className="text-foreground/70">
-                    Plan your route and choose your destination efficiently
-                  </p>
-                </div>
-              </div>
-              <div className="flex gap-4">
-                <Settings2 className="text-primary" />
-                <div>
-                  <h3 className="font-semibold">Personalize Your Trip</h3>
-                  <p className="text-foreground/70">
-                    Your trip should match your needs and interests
-                  </p>
-                </div>
-              </div>
-              <div className="flex gap-4">
-                <Plane className="text-primary" />
-                <div>
-                  <h3 className="font-semibold">Travel Effortlessly</h3>
-                  <p className="text-foreground/70">
-                    Optimize travel pace, optimize your itinerary
-                  </p>
-                </div>
-              </div>
-            </div>
+  PLAN YOUR TRIP <br /> WITH US
+</h2>
+
+<div className="mt-8 space-y-6">
+  <div className="flex gap-4">
+    <Map className="text-primary" />
+    <div>
+      <h3 className="font-semibold">Choose Your Destination</h3>
+      <p className="text-foreground/70">
+        Plan your route and choose your destination efficiently
+      </p>
+    </div>
+  </div>
+
+  <div className="flex gap-4">
+    <Settings2 className="text-primary" />
+    <div>
+      <h3 className="font-semibold">Personalize Your Trip</h3>
+      <p className="text-foreground/70">
+        Your trip should match your needs and interests
+      </p>
+    </div>
+  </div>
+
+  <div className="flex gap-4">
+    <Plane className="text-primary" />
+    <div>
+      <h3 className="font-semibold">Travel Effortlessly</h3>
+      <p className="text-foreground/70">
+        Optimize travel pace, optimize your itinerary
+      </p>
+    </div>
+  </div>
+
+  {/* ✅ New Travel Finance point */}
+  <div className="flex gap-4">
+    <Wallet className="text-primary" /> {/* You can import this icon from lucide-react */}
+    <div>
+      <h3 className="font-semibold">Travel Finance Support</h3>
+      <p className="text-foreground/70">
+        We also provide easy travel finance options to make your dream trip affordable.
+      </p>
+    </div>
+  </div>
+</div>
+
           </div>
           <div className="rounded-2xl overflow-hidden shadow-sm ring-1 ring-border">
             <img
@@ -341,6 +356,24 @@ export default function Index() {
               avatar="https://cdn.builder.io/api/v1/image/assets%2F686d4cd813444250b5fa9039981a4fca%2Fba4e47245f5641169b998574d5356643"
               subtitle="Maldives Holiday"
             />
+            <TestimonialCard
+            quote="Everything was well-organized, from flights to hotels. Their visa service was quick and hassle-free. Truly made my Dubai vacation unforgettable!"
+            name="Sarah Mehta"
+            avatar="https://cdn.builder.io/api/v1/image/assets%2F686d4cd813444250b5fa9039981a4fca%2F80d336b2098344d29f755fa9db50a4a2"
+            subtitle="Dubai Tour"
+          />
+          <TestimonialCard
+            quote="Fantastic experience from start to finish! They handled my Schengen visa smoothly. Highly recommend for stress-free travel."
+            name="Rahul Kumar"
+            avatar="https://cdn.builder.io/api/v1/image/assets%2F686d4cd813444250b5fa9039981a4fca%2F822d4bbfc9aa42fcb052f60f3a64018b"
+            subtitle="Europe Tour"
+          />
+          <TestimonialCard
+            quote="Our honeymoon was perfectly planned. Beautiful resort, smooth bookings, zero stress. They turned our dream trip into reality!"
+            name="Priya Nair"
+            avatar="https://cdn.builder.io/api/v1/image/assets%2F686d4cd813444250b5fa9039981a4fca%2F91014ca335cc4490b432efd0af5ee78e"
+            subtitle="Bali Honeymoon"
+          />
           </div>
         </section>
 

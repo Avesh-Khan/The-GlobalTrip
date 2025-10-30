@@ -216,11 +216,11 @@ export default function PackageDetail() {
                     <li key={c} className="flex items-center gap-2 mt-2"><Check className="text-emerald-600" />{c}</li>
                   ))}
                 </ul>
-              </div>
+              </div>  
 
               <div className="mt-4">
                 <div className="flex">
-                  <Link to="/contact" className="flex-1">
+                  <Link to={`/contact?package=${encodeURIComponent(pkg?.title ?? "")}&id=${encodeURIComponent(pkg?.id ?? "")}`} className="flex-1">
                     <button className="flex-1 rounded-full bg-emerald-600 text-white py-3 px-7 font-semibold">BOOK NOW</button>
                   </Link>
                 </div>

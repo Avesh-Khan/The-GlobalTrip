@@ -425,7 +425,7 @@ export default function Package() {
                           onClick={(e) => {
                             e.stopPropagation();
                             // go to contact for booking
-                            navigate('/contact');
+                            navigate(`/contact?package=${encodeURIComponent(p.title)}&id=${encodeURIComponent(p.id)}`);
                           }}
                           className="flex-1 rounded-full bg-primary text-white py-2 text-sm font-semibold"
                         >

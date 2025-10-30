@@ -3,6 +3,7 @@ import Footer from "@/components/site/Footer";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useLocation, useSearchParams } from "react-router-dom";
 import {
   Form,
   FormControl,
@@ -13,7 +14,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import React, { forwardRef, TextareaHTMLAttributes, useState } from "react";
+import React, { forwardRef, TextareaHTMLAttributes, useState, useEffect } from "react";
 import { packages } from "@/lib/packages";
 import { Helmet } from "react-helmet-async";
 
@@ -99,6 +100,37 @@ export default function Contact() {
     }
   };
 
+  // const [searchParams] = useSearchParams();
+  // const packageIdFromURL = searchParams.get("packageId");
+
+  // useEffect(() => {
+  //   if (packageIdFromURL) {
+  //     form.setValue("packageId", packageIdFromURL);
+  //   }
+  // }, [packageIdFromURL, form]);
+
+
+  const location = useLocation();
+const params = new URLSearchParams(location.search);
+const preselectedPackage = params.get("package");
+const preselectedPackageId = params.get("id");
+
+useEffect(() => {
+  if (preselectedPackageId) {
+    form.setValue("packageId", preselectedPackageId);
+  } else if (preselectedPackage) {
+    // fallback to title matching if only name is sent
+    const found = packages.find(
+      (p) => p.title.toLowerCase() === preselectedPackage.toLowerCase()
+    );
+    if (found) form.setValue("packageId", found.id);
+  }
+  // auto-select enquiry type as "Booking"
+  form.setValue("enquiry", "Booking");
+}, [preselectedPackageId, preselectedPackage, form, packages]);
+
+  
+
   return (
     <>
       <Helmet>
@@ -141,7 +173,7 @@ export default function Contact() {
               <div className="rounded-xl bg-white p-4 shadow-sm">
                 <h4 className="font-semibold">Office</h4>
                 <p className="text-sm text-foreground/70 mt-2">
-                  Nagpur, Maharashtra 
+                  Nagpur, Maharashtra
                 </p>
               </div>
               <div className="rounded-xl bg-white p-4 shadow-sm">
