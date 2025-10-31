@@ -3,6 +3,9 @@ import Footer from "@/components/site/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import naushinImg from "../images/naushin.jpg";
+// import karanImg from "../images/karan.jpg";
+import danishImg from "../images/danish.jpg";
 
 export default function About() {
   return (
@@ -101,21 +104,25 @@ export default function About() {
             </p>
 
             <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-6">
-              {[
-                { name: "Naushin", role: "Founder" },
-                { name: "Karan Yadav", role: "Founder" },
-              ].map((m) => (
-                <div
-                  key={m.name}
-                  className="flex items-center gap-4 bg-white rounded-xl p-4 shadow-sm"
-                >
-                  <div className="h-12 w-12 rounded-full bg-slate-200" />
-                  <div>
-                    <div className="font-semibold">{m.name}</div>
-                    <div className="text-sm text-foreground/60">{m.role}</div>
-                  </div>
-                </div>
-              ))}
+             {[
+  { name: "Naushin Sheikh", role: "Founder", img: naushinImg },
+  { name: "Karan Yadav", role: "Founder" },
+  { name: "Danish Sheikh", role: "Founder", img: danishImg },
+].map((m) => (
+  <div
+    key={m.name}
+    className="flex items-center gap-4 bg-white rounded-xl p-4 shadow-sm"
+  >
+    <div className="h-12 w-12 rounded-full overflow-hidden bg-slate-200">
+      <img src={m.img} className="h-full w-full object-cover" />
+    </div>
+    <div>
+      <div className="font-semibold">{m.name}</div>
+      <div className="text-sm text-foreground/60">{m.role}</div>
+    </div>
+  </div>
+))}
+
             </div>
           </div>
         </section>

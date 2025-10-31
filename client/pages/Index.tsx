@@ -228,49 +228,6 @@ export default function Index() {
           </div>
         </section>
 
-        <section className="container mt-20">
-          <div className="max-w-full mx-auto bg-white p-8 rounded-2xl shadow-sm ring-1 ring-border">
-  <h2 className="text-3xl font-extrabold tracking-tight text-secondary mb-6 text-center">
-    Travel Insurance Policy
-  </h2>
-  <p className="text-center text-sm text-foreground/70 mb-8">
-    We do <strong>USA Dropbox</strong> and provide insurance support for safe and worry-free travel.
-  </p>
-
-  <div>
-  <form className="flex flex-wrap items-center justify-center gap-12">
-    <div>
-      <Label htmlFor="name">Name</Label>
-      <Input id="name" type="text" placeholder="Enter your name"  required />
-    </div>
-
-    <div>
-      <Label htmlFor="phone">Phone</Label>
-      <Input id="phone" type="tel" placeholder="Enter phone number" required />
-    </div>
-
-    <div>
-      <Label htmlFor="email">Email</Label>
-      <Input id="email" type="email" placeholder="Enter email" required />
-    </div>
-
-    <div>
-      <Label htmlFor="country">Country</Label>
-      <Input id="country" type="text" placeholder="Enter country" required />
-    </div>
-
-    <div className="w-full flex justify-center pt-4">
-      <Button type="submit" className="px-6 py-2 uppercase tracking-wide">
-        Submit
-      </Button>
-    </div>
-  </form>
-</div>
-
-</div>
-
-        </section>
-
         {/* 🗺️ Popular Destinations Section */}
         <section className="container mt-20">
           <div className="text-center max-w-2xl mx-auto">

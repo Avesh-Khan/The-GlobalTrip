@@ -173,7 +173,7 @@ useEffect(() => {
               <div className="rounded-xl bg-white p-4 shadow-sm">
                 <h4 className="font-semibold">Office</h4>
                 <p className="text-sm text-foreground/70 mt-2">
-                  Nagpur, Maharashtra
+                  Marwadi Square, Nagpur, Maharashtra
                 </p>
               </div>
               <div className="rounded-xl bg-white p-4 shadow-sm">
@@ -348,6 +348,7 @@ useEffect(() => {
                             <option value="Booking">Booking</option>
                             <option value="Availability">Availability</option>
                             <option value="Visa">Visa</option>
+                            <option value="Travel Finance">Travel Finance</option>
                             <option value="Customization">Customization</option>
                             <option value="Other">Other</option>
                           </select>

@@ -15,7 +15,7 @@ export default function Footer() {
             <div className="h-8 w-8 rounded-full border border-white/20 grid place-items-center">
               ✺
             </div>
-            <div className="text-lg font-semibold">TheGlobalTrek</div>
+            <div className="text-lg font-semibold">TheGlobalTrip</div>
           </div>
 
           <p className="mt-4 text-gray-300 max-w-md text-center md:text-left">
