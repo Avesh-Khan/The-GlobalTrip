@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import naushinImg from "../images/naushin.jpg";
-// import karanImg from "../images/karan.jpg";
+import karanImg from "../images/karan.jpg";
 import danishImg from "../images/danish.jpg";
 
 export default function About() {
@@ -39,7 +39,7 @@ export default function About() {
           <div className="grid md:grid-cols-2 gap-10 items-center">
             <div>
               <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-secondary">
-                About TheGlobalTrek
+                About TheGlobalTrip
               </h1>
               <p className="mt-6 text-foreground/70 max-w-prose">
                 We design personalized trips with trusted partners and 24/7
@@ -106,7 +106,7 @@ export default function About() {
             <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-6">
              {[
   { name: "Naushin Sheikh", role: "Founder", img: naushinImg },
-  { name: "Karan Yadav", role: "Founder" },
+  { name: "Karan Yadav", role: "Founder", img:karanImg },
   { name: "Danish Sheikh", role: "Founder", img: danishImg },
 ].map((m) => (
   <div
