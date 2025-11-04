@@ -108,7 +108,7 @@ export default function Footer() {
       <div className="border-t border-gray-800">
         <div className="container py-4 flex flex-col md:flex-row items-center justify-center text-sm text-gray-400 gap-2">
           <div className="text-center md:text-left">
-            <p>© 2025 TheGlobalTrek. All rights reserved.</p>
+            <p>© 2025 TheGlobalTrip. All rights reserved.</p>
           </div>
         </div>
       </div>

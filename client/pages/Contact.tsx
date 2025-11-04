@@ -349,6 +349,7 @@ useEffect(() => {
                             <option value="Availability">Availability</option>
                             <option value="Visa">Visa</option>
                             <option value="Travel Finance">Travel Finance</option>
+                            <option value="US DropBox Visa">US DropBox Visa</option>
                             <option value="Customization">Customization</option>
                             <option value="Other">Other</option>
                           </select>

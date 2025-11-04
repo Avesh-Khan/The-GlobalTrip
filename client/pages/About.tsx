@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import naushinImg from "../images/naushin.jpg";
-import karanImg from "../images/karan.jpg";
 import danishImg from "../images/danish.jpg";
 
 export default function About() {
@@ -106,7 +105,6 @@ export default function About() {
             <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-6">
              {[
   { name: "Naushin Sheikh", role: "Founder", img: naushinImg },
-  { name: "Karan Yadav", role: "Founder", img:karanImg },
   { name: "Danish Sheikh", role: "Founder", img: danishImg },
 ].map((m) => (
   <div
