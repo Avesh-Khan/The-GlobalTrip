@@ -27,6 +27,7 @@ const schema = z.object({
     .enum(["Booking", "Availability", "Visa", "Customization", "Other"])
     .optional(),
   message: z.string().min(10, "Message must be at least 10 characters"),
+  travelInsurance: z.boolean().optional(),
 });
 
 type FormValues = z.infer<typeof schema>;
@@ -111,25 +112,25 @@ export default function Contact() {
 
 
   const location = useLocation();
-const params = new URLSearchParams(location.search);
-const preselectedPackage = params.get("package");
-const preselectedPackageId = params.get("id");
+  const params = new URLSearchParams(location.search);
+  const preselectedPackage = params.get("package");
+  const preselectedPackageId = params.get("id");
 
-useEffect(() => {
-  if (preselectedPackageId) {
-    form.setValue("packageId", preselectedPackageId);
-  } else if (preselectedPackage) {
-    // fallback to title matching if only name is sent
-    const found = packages.find(
-      (p) => p.title.toLowerCase() === preselectedPackage.toLowerCase()
-    );
-    if (found) form.setValue("packageId", found.id);
-  }
-  // auto-select enquiry type as "Booking"
-  form.setValue("enquiry", "Booking");
-}, [preselectedPackageId, preselectedPackage, form, packages]);
+  useEffect(() => {
+    if (preselectedPackageId) {
+      form.setValue("packageId", preselectedPackageId);
+    } else if (preselectedPackage) {
+      // fallback to title matching if only name is sent
+      const found = packages.find(
+        (p) => p.title.toLowerCase() === preselectedPackage.toLowerCase()
+      );
+      if (found) form.setValue("packageId", found.id);
+    }
+    // auto-select enquiry type as "Booking"
+    form.setValue("enquiry", "Booking");
+  }, [preselectedPackageId, preselectedPackage, form, packages]);
 
-  
+
 
   return (
     <>
@@ -373,6 +374,28 @@ useEffect(() => {
                     </FormItem>
                   )}
                 />
+
+                <FormField
+                  control={form.control}
+                  name="travelInsurance"
+                  render={({ field }) => (
+                    <FormItem className="flex items-center gap-2 mt-4">
+                      <FormControl>
+                        <input
+                          type="checkbox"
+                          id="travelInsurance"
+                          checked={field.value || false}
+                          onChange={(e) => field.onChange(e.target.checked)}
+                          className="h-3 w-3 mt-2 text-primary border-gray-300 rounded focus:ring-primary"
+                        />
+                      </FormControl>
+                      <FormLabel htmlFor="travelInsurance" className="text-sm text-foreground/80">
+                        I would like to include Travel Insurance
+                      </FormLabel>
+                    </FormItem>
+                  )}
+                />
+
 
                 <div className="flex items-center gap-3">
                   <Button

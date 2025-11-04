@@ -198,9 +198,9 @@ export default function Index() {
   <div className="flex gap-4">
     <Plane className="text-primary" />
     <div>
-      <h3 className="font-semibold">Travel Effortlessly</h3>
+      <h3 className="font-semibold">We do US Dropbox Visa</h3>
       <p className="text-foreground/70">
-        Optimize travel pace, optimize your itinerary
+        Hassle-free assistance for US Dropbox Visa applications — from form filling to submission support.
       </p>
     </div>
   </div>
