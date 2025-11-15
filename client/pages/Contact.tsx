@@ -189,11 +189,11 @@ export default function Contact() {
               <div className="rounded-xl bg-white p-4 shadow-sm">
                 <h4 className="font-semibold">Phone</h4>
                 <a
-                  href="tel:+919156856387"
+                  href="tel:+917387868525"
                   className="text-sm text-primary hover:underline"
                   style={{ marginLeft: "1px" }}
                 >
-                  +91 9156856387
+                  +91 7387868525
                 </a>
               </div>
               <div className="rounded-xl bg-white p-4 shadow-sm">

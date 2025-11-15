@@ -139,9 +139,11 @@ export default function Index() {
                     Book your Packages
                   </Button>
                 </Link>
+                <Link to="/contact">
                 <Button variant="outline" className="px-6 py-3">
                   Contact
                 </Button>
+                </Link>
               </div>
             </div>
           </div>
@@ -283,9 +285,11 @@ export default function Index() {
               Set your travel goals, optimize your budget, and obtain all
               necessary documentation to visit destinations.
             </p>
+            <Link to="/visa">
             <Button className="mt-6 bg-primary hover:bg-primary/90 text-white uppercase tracking-wide">
               Learn More
             </Button>
+            </Link>
           </div>
         </section>
 
