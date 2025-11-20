@@ -34,7 +34,7 @@ export default function About() {
           </div>
         </section>
 
-        <section className="container py-16 pb-24">
+        <section className="container py-16">
           <div className="grid md:grid-cols-2 gap-10 items-center">
             <div>
               <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-secondary">
@@ -101,27 +101,6 @@ export default function About() {
               A small, experienced team of travelers and planners who love
               crafting exceptional trips.
             </p>
-
-            <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-6">
-             {[
-  { name: "Naushin Sheikh", role: "Founder", img: naushinImg },
-  { name: "Danish Sheikh", role: "Founder", img: danishImg },
-].map((m) => (
-  <div
-    key={m.name}
-    className="flex items-center gap-4 bg-white rounded-xl p-4 shadow-sm"
-  >
-    <div className="h-12 w-12 rounded-full overflow-hidden bg-slate-200">
-      <img src={m.img} className="h-full w-full object-cover" />
-    </div>
-    <div>
-      <div className="font-semibold">{m.name}</div>
-      <div className="text-sm text-foreground/60">{m.role}</div>
-    </div>
-  </div>
-))}
-
-            </div>
           </div>
         </section>
 
